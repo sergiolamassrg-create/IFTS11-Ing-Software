@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#146b68">
+  <title>Repaso TP N.º 2 · Grupo 6</title>
+  <link rel="stylesheet" href="quiz.css">
+  <script src="quiz-data.js" defer></script>
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="assets/logo-ifts-11.svg" alt="IFTS 11">
+      <div>
+        <strong>Ingeniería de Software</strong>
+        <span>Repaso del TP N.º 2 · Grupo 6</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="score" aria-live="polite"><span id="scoreValue">0</span><small>aciertos</small></div>
+      <div class="avatar" aria-hidden="true">G6</div>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Abrir temas" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="topic-panel" id="topicPanel" aria-label="Temas del cuestionario">
+      <p class="panel-label">Tema</p>
+      <div class="topic-list" id="topicList"></div>
+      <div class="overall-progress">
+        <div><span>Progreso</span><strong id="progressText">0 / 30</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+      </div>
+    </aside>
+
+    <section class="quiz-area" aria-live="polite">
+      <div class="mobile-progress">
+        <div><span>Progreso</span><strong id="mobileProgressText">0 / 30</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="mobileProgressBar"></span></div>
+      </div>
+      <div id="quizView">
+        <div class="question-meta">
+          <span id="topicName"></span>
+          <span id="questionNumber"></span>
+        </div>
+        <h1 id="questionText"></h1>
+        <div class="options" id="options" role="radiogroup" aria-labelledby="questionText"></div>
+        <p class="feedback" id="feedback" aria-live="assertive"></p>
+        <div class="actions">
+          <button class="button button-secondary" id="previousButton" type="button">Anterior</button>
+          <button class="button button-primary" id="checkButton" type="button">Comprobar</button>
+          <button class="button button-primary" id="nextButton" type="button" hidden>Siguiente</button>
+        </div>
+      </div>
+
+      <div class="results" id="resultsView" hidden>
+        <p class="result-kicker">Repaso completado</p>
+        <h1 id="resultTitle"></h1>
+        <p id="resultSummary"></p>
+        <div class="result-grid" id="resultGrid"></div>
+        <button class="button button-primary" id="restartButton" type="button">Volver a empezar</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

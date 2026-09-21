@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#146b68">
+  <title>Resultados · Repaso TP N.º 2</title>
+  <link rel="stylesheet" href="quiz.css">
+  <script src="resultados.js" defer></script>
+</head>
+<body class="results-page">
+  <header class="app-header">
+    <div class="brand">
+      <img src="assets/logo-ifts-11.svg" alt="IFTS 11">
+      <div><strong>Ingeniería de Software</strong><span>Resultados del repaso · Grupo 6</span></div>
+    </div>
+    <a class="header-link" href="index.html">Volver al cuestionario</a>
+  </header>
+
+  <main class="dashboard" id="dashboard">
+    <section class="dashboard-heading">
+      <div>
+        <p class="dashboard-kicker">Resultado final</p>
+        <h1 id="dashboardTitle">Tu tablero de repaso</h1>
+        <p id="dashboardSummary"></p>
+      </div>
+      <div class="score-ring" id="scoreRing"><strong id="percentage">0%</strong><span>resultado</span></div>
+    </section>
+
+    <section class="metric-grid" aria-label="Resumen del resultado">
+      <article class="metric metric-primary"><span>Puntaje</span><strong id="points">0 / 0</strong></article>
+      <article class="metric metric-good"><span>Correctas</span><strong id="correctCount">0</strong></article>
+      <article class="metric metric-adjust"><span>A ajustar</span><strong id="wrongCount">0</strong></article>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="section-heading"><div><p class="dashboard-kicker">Rendimiento</p><h2>Resultado por tema</h2></div></div>
+      <div class="topic-results" id="topicResults"></div>
+    </section>
+
+    <section class="insight-grid">
+      <article class="insight insight-good">
+        <p class="dashboard-kicker">Puntos fuertes</p>
+        <h2>Lo que dominás bien</h2>
+        <div id="strongPoints"></div>
+      </article>
+      <article class="insight insight-adjust">
+        <p class="dashboard-kicker">Para reforzar</p>
+        <h2>Lo que conviene ajustar</h2>
+        <div id="adjustPoints"></div>
+      </article>
+    </section>
+
+    <div class="dashboard-actions">
+      <a class="button button-secondary" href="index.html">Volver al inicio</a>
+      <a class="button button-primary" href="index.html" id="retryButton">Repetir cuestionario</a>
+    </div>
+  </main>
+
+  <main class="empty-results" id="emptyResults" hidden>
+    <h1>Todavía no hay resultados</h1>
+    <p>Completá un cuestionario para generar tu tablero.</p>
+    <a class="button button-primary" href="index.html">Comenzar repaso</a>
+  </main>
+</body>
+</html>
